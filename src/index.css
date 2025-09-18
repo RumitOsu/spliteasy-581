@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #3B82F6;
+  --mint-green: #10B981;
+  --light-blue: #E0F2FE;
+  --dark-text: #1F2937;
+  --background: #E0F2FE; /* Light blue background for the whole site */
+}
+
+body {
+  background-color: var(--background); /* Use direct CSS variable */
+  @apply text-gray-800;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-blue), var(--mint-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary-blue), var(--mint-green));
+}
+
+.hero-bg {
+  background-color: var(--background); /* Use direct CSS variable */
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.1), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.1), transparent 40%);
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.angled-section-top {
+  clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
+}
+
+.angled-section-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5rem), 0 100%);
+}
+
+.cta-button-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(16, 185, 129, 0.3);
+}
